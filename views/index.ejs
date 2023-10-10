@@ -1,0 +1,216 @@
+<%- include('./partials/head') %>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signo del Zodiaco</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+<style>
+</style>
+  <body>
+
+    <div>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="container">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <h1 style="text-align: center;">Encuesta personalida</h1>
+
+                    <form id="myForm" action="/submit" method="POST" class="mt-4 needs-validation" novalidate>
+                      <div class="row">
+                        <div class="col-md">
+                          <div class="mb-3">
+                            <label for="name" for="validationCustom03" class="form-label">Nombre completo: </label>
+                            <input type="text" id="name validationCustom03" name="name" class="form-control"
+                              placeholder="" required>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Correo electrónico: </label>
+                            <input type="email" id="email" name="email" class="form-control"
+                              placeholder="" required>
+                          </div>
+                        </div>
+                      </div>
+                      <ol>
+                        <li class="mb-3">
+                          <label for="validationCustom04" id="Question 1" class="form-label">¿Cómo te sientes en situaciones sociales?</label>
+                          <select id="validationCustom04" name="answer1" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Cómodo y relajado</option>
+                            <option value="2">Inicialmente incómodo, pero luego me adapto</option>
+                            <option value="3">Prefiero evitar situaciones sociales</option>
+                            <option value="4">Me siento ansioso y nervioso</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 2" class="form-label">¿Cuál es tu actividad preferida en tu tiempo libre?</label>
+                          <select name="answer2" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Salir con amigos</option>
+                            <option value="2">Leer un libro o ver una película en casa</option>
+                            <option value="3">Hacer ejercicio o practicar deportes</option>
+                            <option value="4">Trabajar en un proyecto persona</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 3" class="form-label">¿Qué tipo de música te gusta más?</label>
+                          <select name="answer3" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Pop y música actual</option>
+                            <option value="2">Música clásica y tranquila</option>
+                            <option value="3">Rock y música enérgica</option>
+                            <option value="4">Música experimental y poco convencional</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 4" class="form-label">¿Cómo reaccionas ante un desafío inesperado?</label>
+                          <select name="answer4" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Lo enfrento con determinación</option>
+                            <option value="2">Me tomo un tiempo para pensar en la solución</option>
+                            <option value="3">Me siento abrumado y estresado</option>
+                            <option value="4">Evito los desafíos cuando puedo</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 5" class="form-label">¿Cuál es tu enfoque principal en la vida?</label>
+                          <select name="answer5" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Lograr el éxito profesional</option>
+                            <option value="2">Encontrar la felicidad y el equilibrio</option>
+                            <option value="3">Experimentar nuevas aventuras</option>
+                            <option value="4">Buscar el significado y propósito de la vida</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 6" class="form-label">¿Qué valoras más en una amistad?</label>
+                          <select name="answer6" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Lealtad y confianza</option>
+                            <option value="2">Compatibilidad y diversión</option>
+                            <option value="3">SAventuras emocionantes</option>
+                            <option value="4">Intelecto y conversaciones profundas</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 7" class="form-label">¿Cómo manejas el estrés?</label>
+                          <select name="answer7" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Organizando mis tareas y responsabilidades</option>
+                            <option value="2">Tomando un descanso y relajándome</option>
+                            <option value="3">Buscando distracciones y evitando pensar en ello</option>
+                            <option value="4">Me resulta difícil manejar el estrés</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 8" class="form-label">¿Qué prefieres en una vacación ideal?</label>
+                          <select name="answer8" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Visitar museos y lugares históricos</option>
+                            <option value="2">Relajarte en una playa tranquila</option>
+                            <option value="3">Hacer senderismo y explorar la naturaleza</option>
+                            <option value="4">Experimentar la vida nocturna y la cultura local</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 9" class="form-label">¿Cómo te comportas cuando te enfrentas a un problema ético?</label>
+                          <select name="answer9" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Siempre actúo de manera ética y moral</option>
+                            <option value="2">Considero las consecuencias antes de decidir</option>
+                            <option value="3">A veces, elijo lo que es más conveniente para mí</option>
+                            <option value="4">No suelo preocuparme por cuestiones éticas</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 10" class="form-label">¿Qué tipo de libros te atraen más?</label>
+                          <select name="answer10" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Novelas de ciencia ficción y fantasía</option>
+                            <option value="2">Libros de autoayuda y desarrollo personal</option>
+                            <option value="3">Biografías y libros de historia</option>
+                            <option value="4">Literatura clásica y filosofía</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 11" class="form-label">¿Cómo te sientes acerca de los cambios en tu vida?</label>
+                          <select name="answer11" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Los abrazo y me adapto rápidamente</option>
+                            <option value="2">Me siento inseguro pero los acepto con el tiempo</option>
+                            <option value="3">Los evito y prefiero la rutina</option>
+                            <option value="4">Me asustan y me resisto a ellos</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 12" class="form-label">¿Cuál es tu enfoque en las relaciones amorosas?</label>
+                          <select name="answer12" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Busco una relación estable y a largo plazo</option>
+                            <option value="2">Disfruto de la compañía y el romance sin compromiso</option>
+                            <option value="3">Me enfoco en mi independencia y carrera</option>
+                            <option value="4">Soy reacio a involucrarme emocionalmente</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 13" class="form-label">¿Cómo reaccionas ante el fracaso?</label>
+                          <select name="answer13" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Aprendo de él y sigo adelante</option>
+                            <option value="2">Me siento desanimado pero persisto</option>
+                            <option value="3">Me siento abrumado y desesperado</option>
+                            <option value="4">Evito asumir riesgos para evitar el fracaso</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 14" class="form-label">¿Cuál es tu actitud hacia la planificación a largo plazo?</label>
+                          <select name="answer14" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Me gusta planificar cuidadosamente mi futuro</option>
+                            <option value="2">Prefiero vivir el presente y adaptarme a lo que venga</option>
+                            <option value="3">BNo me preocupo por el futuro, vivo el momento</option>
+                            <option value="4">Me siento abrumado por la incertidumbre del futuro</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 15" class="form-label">¿Cuál es tu reacción típica ante la injusticia?</label>
+                          <select name="answer15" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Luchar activamente por la justicia</option>
+                            <option value="2">Expresar mi descontento de manera constructiva</option>
+                            <option value="3">Ignorarla para evitar conflictos</option>
+                            <option value="4">Sentirme impotente y no hacer nada</option>
+                          </select>
+                        </li>
+                      </ol>
+                      <br>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">
+                          Enviar
+                        </button>
+                      </div>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+<br><br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  </html>
+  <script src="/js/index.js"></script>

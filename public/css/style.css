@@ -1,0 +1,15 @@
+body {
+  /* Establece la imagen de fondo */
+  /* background-image: url("/images/imagen.jpg"); */
+  background-color: aliceblue;
+  /* Establece el tamaño y comportamiento de la imagen de fondo */
+  background-size: cover;
+  /* Opcional: Establece el color de fondo para que se muestre mientras carga la imagen */
+  background-color: #f0f0f0;
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
